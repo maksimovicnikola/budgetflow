@@ -5,9 +5,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>BudgetFlow</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
-        <div class="top"></div>
-        <div class="bottom"></div>
+        <div class="top">
+            <div class="budget-container">
+                <div class="budget-container__label"></div>
+                <div class="budget-container__summary"></div>
+                <div class="budget-container__status">
+                    <div class="budget-container__status-income"></div>
+                    <div class="budget-container__status-expenses"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="new-item">
+                <select name="status" id="status" class="new-item__select">
+                    <option value="inc" class="new-item__select-income">Income</option>
+                    <option value="exp" class="new-item__select-expense">Expense</option>
+                </select>
+                <input type="text" name="" id="" class="new-item__description" />
+                <input type="number" name="" id="" class="new-item__value" />
+                <button class="new-item__button">
+                    <i class="new-item__icon"></i>
+                </button>
+            </div>
+            <div class="list-container">
+                <div class="incomes">
+                    <ul class="income-list">
+                        <li class="income-list__item">
+                            <div class="income-list__item-description"></div>
+                            <div class="income-list__item-value"></div>
+                            <button class="income-list__button">
+                                <i class="income-list__button-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="expenses">
+                    <ul class="expense-list">
+                        <li class="expense-list__item">
+                            <div class="expense-list__item-description"></div>
+                            <div class="expense-list__item-value"></div>
+                            <div class="expense-list__item-percentage"></div>
+                            <button class="expense-list__button">
+                                <i class="expense-list__button-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
