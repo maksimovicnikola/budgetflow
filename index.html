@@ -5,57 +5,89 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>BudgetFlow</title>
+        <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
         <link rel="stylesheet" href="style.css" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap" rel="stylesheet" />
+        <!-- Ionicons -->
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
     </head>
 
     <body>
         <div class="top">
             <div class="budget-container">
-                <div class="budget-container__label"></div>
-                <div class="budget-container__summary"></div>
+                <div class="budget-container__label">Available Budget in November 2019:</div>
+                <div class="budget-container__summary">+ 100.00 &euro;</div>
                 <div class="budget-container__status">
-                    <div class="budget-container__status-income"></div>
-                    <div class="budget-container__status-expenses"></div>
+                    <div class="budget-container__income">
+                        <div class="budget-container__income-label">INCOME</div>
+                        <div class="budget-container__income-value">+ 100.00</div>
+                        <div class="budget-container__income-percentage">83%</div>
+                    </div>
+                    <div class="budget-container__expenses">
+                        <div class="budget-container__expenses-label">EXPENSES</div>
+                        <div class="budget-container__expenses-value">- 50.00</div>
+                        <div class="budget-container__expenses-percentage">50%</div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="bottom">
             <div class="new-item">
                 <select name="status" id="status" class="new-item__select">
-                    <option value="inc" class="new-item__select-income">Income</option>
-                    <option value="exp" class="new-item__select-expense">Expense</option>
+                    <option value="inc" class="new-item__select-income">+</option>
+                    <option value="exp" class="new-item__select-expense">-</option>
                 </select>
-                <input type="text" name="" id="" class="new-item__description" />
-                <input type="number" name="" id="" class="new-item__value" />
-                <button class="new-item__button">
-                    <i class="new-item__icon"></i>
+                <input
+                    type="text"
+                    name="description"
+                    id="description"
+                    class="new-item__description"
+                    placeholder="Add description"
+                />
+                <input type="number" name="value" id="value" class="new-item__value" placeholder="Value" min="1" />
+                <button class="btn-icon new-item__button">
+                    <i class="new-item__button-icon icon ion-ios-checkmark-circle-outline"></i>
                 </button>
             </div>
             <div class="list-container">
                 <div class="incomes">
+                    <h2 class="incomes__title">INCOME</h2>
                     <ul class="income-list">
                         <li class="income-list__item">
-                            <div class="income-list__item-description"></div>
-                            <div class="income-list__item-value"></div>
-                            <button class="income-list__button">
-                                <i class="income-list__button-icon"></i>
+                            <div class="income-list__item-description">Sold watch</div>
+                            <div class="income-list__item-value">+ 75.00</div>
+                            <button class="btn-icon income-list__button">
+                                <i class="income-list__button-icon icon ion-ios-close-circle-outline"></i>
+                            </button>
+                        </li>
+                        <li class="income-list__item">
+                            <div class="income-list__item-description">Sold picture</div>
+                            <div class="income-list__item-value">+ 25.00</div>
+                            <button class="btn-icon income-list__button">
+                                <i class="income-list__button-icon icon ion-ios-close-circle-outline"></i>
                             </button>
                         </li>
                     </ul>
                 </div>
                 <div class="expenses">
+                    <h2 class="incomes__expenses">EXPENSES</h2>
                     <ul class="expense-list">
                         <li class="expense-list__item">
-                            <div class="expense-list__item-description"></div>
-                            <div class="expense-list__item-value"></div>
-                            <div class="expense-list__item-percentage"></div>
-                            <button class="expense-list__button">
-                                <i class="expense-list__button-icon"></i>
+                            <div class="expense-list__item-description">Bought groceries</div>
+                            <div class="expense-list__item-value">- 50.00</div>
+                            <div class="expense-list__item-percentage d-none">---</div>
+                            <button class="btn-icon expense-list__button">
+                                <i class="expense-list__button-icon icon ion-ios-close-circle-outline"></i>
                             </button>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <!-- Our script file -->
+        <script src="script.js"></script>
     </body>
 </html>
