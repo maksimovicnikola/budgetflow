@@ -267,7 +267,7 @@ var UIController = (function() {
             document.querySelector(DOMStrings.inputDescription).focus();
 
             //-- Set inputs style to initial state
-            this.resetInputStyle();
+            resetInputStyle();
         },
         getInputs: function() {
             var type, description, value;
